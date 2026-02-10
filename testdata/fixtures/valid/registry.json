@@ -1,0 +1,12 @@
+{
+  "registries": [
+    {
+      "name": "private",
+      "type": "private",
+      "servers_relative_path": [
+        "servers/hello/server.json",
+        "servers/world/server.json"
+      ]
+    }
+  ]
+}

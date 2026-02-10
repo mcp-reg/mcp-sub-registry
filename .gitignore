@@ -1,0 +1,33 @@
+bin/
+*.pyc
+__pycache__/
+internal/frontend/dist/
+web/dist/
+init.sh
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Environment files (keep .env.example)
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+
+# Go
+*.exe
+*.test
+*.out
+coverage/
+*.coverprofile
+
+# Logs
+*.log

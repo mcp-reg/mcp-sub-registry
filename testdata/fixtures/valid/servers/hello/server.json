@@ -1,0 +1,12 @@
+{
+  "name": "test/hello",
+  "description": "Hello world server",
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@test/hello",
+      "transport": {"type": "stdio"}
+    }
+  ]
+}

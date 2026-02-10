@@ -12,7 +12,7 @@
   <a href="https://github.com/mcp-reg/mcp-sub-registry/actions/workflows/ci.yml"><img src="https://github.com/mcp-reg/mcp-sub-registry/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://go.dev/"><img src="https://img.shields.io/badge/Go-1.25+-00ADD8?style=flat&logo=go" alt="Go 1.23+"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
-  <a href="https://mcp-reg.com"><img src="https://img.shields.io/badge/Try%20Free-aireg.dev-blueviolet" alt="Try Free"></a>
+  <a href="https://mcp-reg.com"><img src="https://img.shields.io/badge/Try%20Free-mcp-reg.com-blueviolet" alt="Try Free"></a>
 </p>
 
 ---

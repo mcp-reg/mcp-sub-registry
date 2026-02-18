@@ -19,8 +19,8 @@ Users can manage their private MCP registry with a single installed binary, gett
 
 ### Active
 
-- [ ] `mcp-registry add` subcommand: create `server.json` in `mcps/author/name/` and register it in `registry.json`, run from within a cloned template repo
-- [ ] `mcp-registry validate` subcommand: validate `config.json`, `registry.json`, and all referenced private `server.json` files against their JSON schemas, run from within a cloned template repo
+- [ ] `mcp-registry cli add` subcommand: create `server.json` in `mcps/author/name/` and register it in `registry.json`, run from within a cloned template repo
+- [ ] `mcp-registry cli validate` subcommand: validate `config.json`, `registry.json`, and all referenced private `server.json` files against their JSON schemas, run from within a cloned template repo
 
 ### Out of Scope
 

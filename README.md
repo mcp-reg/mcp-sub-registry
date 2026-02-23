@@ -108,10 +108,10 @@ GITHUB_TOKEN=your_token mcp-registry
 
 ### Setup your Git Configuration Repo
 
-* Fork or Clone the template repo at: https://github.com/mcp-reg/registry-template . Press the [Use this template](https://github.com/new?template_name=registry-template&template_owner=mcp-reg) in the Github UI.
+* Fork or Clone the template repo at: https://github.com/mcp-reg/mcp-registry-template . Press the [Use this template](https://github.com/new?template_name=mcp-registry-template&template_owner=mcp-reg) in the Github UI.
 * You now have an MCP Sub-Registry configured with a basic configuration.
 * Access the Marketplace UI via your server for the repo you created at: `http://localhost:8080/<your org>/<your repo name>`
-* Follow instructions at https://github.com/mcp-reg/registry-template (or at your new repo README.md) for further customizaiton of you new MCP Sub-Registry.
+* Follow instructions at https://github.com/mcp-reg/mcp-registry-template (or at your new repo README.md) for further customizaiton of you new MCP Sub-Registry.
 
 ### Deploy Your Server
 * Depoly to your favorite platform: Lambda, GCP Cloud Run, Kubernetes. Single binary deployment in your prefered container.

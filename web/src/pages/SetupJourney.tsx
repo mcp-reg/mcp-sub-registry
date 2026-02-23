@@ -72,27 +72,81 @@ export function SetupJourney({ org = "your-org", repo = "mcp-registry" }: SetupJ
     <div className="dark min-h-screen bg-background-dark text-slate-100 font-display">
       <Header />
       <main className="max-w-[960px] mx-auto px-6 py-12">
-        {/* Hero Section with URL Input */}
+        {/* Intro: What / Who / Why (compact) */}
+        <section className="mb-8">
+          <div className="py-8 px-6 rounded-2xl bg-primary/5 border border-primary/20">
+            <div className="flex flex-wrap items-center gap-2 mb-5">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                <span className="material-symbols-outlined text-base">auto_awesome</span>
+                Free & Open Source
+              </span>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-3 text-left">
+              <div>
+                <h2 className="text-slate-300 font-bold text-xs uppercase tracking-wider mb-1.5">What is this?</h2>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  A self-hosted MCP registry that aggregates public registries and your private servers into one unified marketplace and API.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-slate-300 font-bold text-xs uppercase tracking-wider mb-1.5">Who is it for?</h2>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Teams and organizations that want a single, curated MCP catalog and control over what developers see in the IDE.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-slate-300 font-bold text-xs uppercase tracking-wider mb-1.5">Why use it?</h2>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  No signup, no login, free. GitOps-driven: your repo is the source of truth. One place for public and private MCP servers.
+                </p>
+              </div>
+            </div>
+            <p className="text-slate-400 text-sm mt-4 pt-4 border-t border-slate-700/50">
+              The service is open source — run it in your own environment:{" "}
+              <a
+                href="https://github.com/mcp-reg/mcp-sub-registry"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                mcp-reg/mcp-sub-registry
+              </a>
+            </p>
+          </div>
+        </section>
+
+        {/* Get started: Step 1 + Step 2 (separate section) */}
         <section className="mb-16">
-          <div className="flex flex-col items-center text-center gap-6 py-12 bg-primary/5 rounded-2xl border border-primary/20">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-              <span className="material-symbols-outlined text-base">auto_awesome</span>
-              Free & Open Source
-            </div>
-            <div className="max-w-[600px] space-y-4 px-6">
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                View Your <span className="text-primary">MCP Registry</span> Instantly
-              </h1>
-              <p className="text-slate-400 text-lg leading-relaxed">
-                Paste your GitHub repo URL and instantly view all your MCP servers. No signup, no login, completely free.
+          <h2 className="text-lg font-bold text-slate-200 mb-4">Get started</h2>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {/* Step 1 */}
+            <div className="rounded-xl border border-slate-700 bg-slate-900/50 p-6 flex flex-col">
+              <span className="text-primary font-bold text-xs uppercase tracking-wider">Step 1</span>
+              <h3 className="text-lg font-bold text-slate-200 mt-1 mb-2">Copy the template</h3>
+              <p className="text-slate-400 text-sm leading-relaxed flex-1">
+                Create a repo from our template so you have a registry config and place for private server definitions.
               </p>
+              <a
+                href="https://github.com/mcp-reg/mcp-registry-template/generate"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 mt-4 px-4 py-2.5 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors w-fit"
+              >
+                Use this template
+                <span className="material-symbols-outlined text-lg">open_in_new</span>
+              </a>
             </div>
-            
-            {/* URL Input Form */}
-            <form onSubmit={handleSubmit} className="w-full max-w-xl px-6">
-              <div className="flex flex-col sm:flex-row gap-3">
-                <div className="flex-1 relative">
-                  <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+
+            {/* Step 2 */}
+            <div className="rounded-xl border border-slate-700 bg-slate-900/50 p-6 flex flex-col">
+              <span className="text-primary font-bold text-xs uppercase tracking-wider">Step 2</span>
+              <h3 className="text-lg font-bold text-slate-200 mt-1 mb-2">View your registry</h3>
+              <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                Paste your GitHub repo URL (or org/repo) to open the registry.
+              </p>
+              <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                <div className="relative">
+                  <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">
                     link
                   </span>
                   <Input
@@ -103,34 +157,36 @@ export function SetupJourney({ org = "your-org", repo = "mcp-registry" }: SetupJ
                       setError("")
                     }}
                     placeholder="github.com/your-org/your-registry"
-                    className="pl-10 h-12 text-base bg-slate-900 border-slate-700 focus:border-primary"
+                    className="pl-10 h-11 text-sm bg-slate-800 border-slate-600 focus:border-primary"
                   />
                 </div>
-                <Button type="submit" className="h-12 px-6 font-bold">
+                <Button type="submit" className="h-11 font-bold">
                   <span className="flex items-center gap-2">
                     View Registry
                     <span className="material-symbols-outlined text-lg">arrow_forward</span>
                   </span>
                 </Button>
-              </div>
-              {error && (
-                <p className="text-red-400 text-sm mt-2 text-left">{error}</p>
-              )}
-            </form>
-            
-            {/* Example Link */}
-            <div className="flex items-center gap-2 text-sm">
-              <span className="text-slate-500">Try an example:</span>
-              <button
-                type="button"
-                onClick={handleExampleClick}
-                className="text-primary hover:underline"
-              >
-                mcp-reg/mcp-registry-template
-              </button>
+                {error && (
+                  <p className="text-red-400 text-sm">{error}</p>
+                )}
+              </form>
+              <p className="text-slate-500 text-xs mt-2">
+                Try an example:{" "}
+                <button
+                  type="button"
+                  onClick={handleExampleClick}
+                  className="text-primary hover:underline"
+                >
+                  mcp-reg/mcp-registry-template
+                </button>
+              </p>
             </div>
           </div>
         </section>
+
+        <p className="text-slate-500 text-sm mb-6">
+          After you&apos;ve created your repo and opened it here, follow the setup journey below.
+        </p>
 
         {/* Steps Header */}
         <div className="flex items-center justify-between border-b border-[#283339] pb-6 mb-10">
@@ -175,12 +231,12 @@ export function SetupJourney({ org = "your-org", repo = "mcp-registry" }: SetupJ
               <span className="text-primary font-bold text-sm uppercase tracking-wider">Step 02</span>
               <h3 className="text-2xl font-bold leading-tight">Define Your Internal Server</h3>
               <p className="text-slate-400 leading-relaxed">
-                Create a <code className="bg-[#283339] px-1.5 py-0.5 rounded text-sm font-mono">servers/my-server/server.json</code> file with your MCP server definition.
+                Create a <code className="bg-[#283339] px-1.5 py-0.5 rounded text-sm font-mono">mcps/my-server/server.json</code> file with your MCP server definition.
               </p>
             </div>
             <div className="bg-slate-900 rounded-xl p-5 border border-slate-800">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">servers/my-server/server.json</span>
+                <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">mcps/my-server/server.json</span>
                 <CopyButton text={`{
   "name": "${org}/my-server",
   "description": "My Internal MCP Server",
@@ -218,7 +274,7 @@ export function SetupJourney({ org = "your-org", repo = "mcp-registry" }: SetupJ
               <span className="text-primary font-bold text-sm uppercase tracking-wider">Step 03</span>
               <h3 className="text-2xl font-bold leading-tight">Configure Your Registry</h3>
               <p className="text-slate-400 leading-relaxed">
-                Create <code className="bg-[#283339] px-1.5 py-0.5 rounded text-sm font-mono">registry.json</code> at root. Mix internal servers with public ones from GitHub's MCP registry.
+                Update <code className="bg-[#283339] px-1.5 py-0.5 rounded text-sm font-mono">registry.json</code> at root. Mix internal servers with public ones from GitHub's MCP registry.
               </p>
             </div>
             <div className="bg-slate-900 rounded-xl p-5 border border-slate-800">

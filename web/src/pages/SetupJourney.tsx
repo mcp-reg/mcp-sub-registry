@@ -185,14 +185,14 @@ export function SetupJourney({ org = "your-org", repo = "mcp-registry" }: SetupJ
         </section>
 
         <p className="text-slate-500 text-sm mb-6">
-          After you&apos;ve created your repo and opened it here, follow the setup journey below.
+          After you&apos;ve created your repo and opened it here, follow the steps below to customize your registry.
         </p>
 
         {/* Steps Header */}
         <div className="flex items-center justify-between border-b border-[#283339] pb-6 mb-10">
           <div>
-            <h2 className="text-2xl font-bold">Registry Setup Journey</h2>
-            <p className="text-slate-500 mt-1">Complete these 5 steps to establish your private server ecosystem.</p>
+            <h2 className="text-2xl font-bold">Customize Your Registry</h2>
+            <p className="text-slate-500 mt-1">Complete these 4 steps to establish your private server ecosystem.</p>
           </div>
           <div className="hidden sm:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">
             <span className="relative flex h-2 w-2">
@@ -208,27 +208,6 @@ export function SetupJourney({ org = "your-org", repo = "mcp-registry" }: SetupJ
           <div className="space-y-4">
             <div className="space-y-1">
               <span className="text-primary font-bold text-sm uppercase tracking-wider">Step 01</span>
-              <h3 className="text-2xl font-bold leading-tight">Create from Template</h3>
-              <p className="text-slate-400 leading-relaxed">
-                Create a repository for your organization. This GitHub repo will act as your registry's database and control plane.
-              </p>
-            </div>
-            <p className="text-slate-400 leading-relaxed">
-              <a
-                href="https://github.com/mcp-reg/mcp-registry-template/generate"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline"
-              >
-                Use this template →
-              </a>
-            </p>
-          </div>
-
-          {/* Step 2 */}
-          <div className="space-y-4">
-            <div className="space-y-1">
-              <span className="text-primary font-bold text-sm uppercase tracking-wider">Step 02</span>
               <h3 className="text-2xl font-bold leading-tight">Define Your Internal Server</h3>
               <p className="text-slate-400 leading-relaxed">
                 Create a <code className="bg-[#283339] px-1.5 py-0.5 rounded text-sm font-mono">mcps/my-server/server.json</code> file with your MCP server definition.
@@ -268,10 +247,10 @@ export function SetupJourney({ org = "your-org", repo = "mcp-registry" }: SetupJ
             </p>
           </div>
 
-          {/* Step 3 */}
+          {/* Step 2 */}
           <div className="space-y-4">
             <div className="space-y-1">
-              <span className="text-primary font-bold text-sm uppercase tracking-wider">Step 03</span>
+              <span className="text-primary font-bold text-sm uppercase tracking-wider">Step 02</span>
               <h3 className="text-2xl font-bold leading-tight">Configure Your Registry</h3>
               <p className="text-slate-400 leading-relaxed">
                 Update <code className="bg-[#283339] px-1.5 py-0.5 rounded text-sm font-mono">registry.json</code> at root. Mix internal servers with public ones from GitHub's MCP registry.
@@ -322,10 +301,10 @@ export function SetupJourney({ org = "your-org", repo = "mcp-registry" }: SetupJ
             </div>
           </div>
 
-          {/* Step 4 */}
+          {/* Step 3 */}
           <div className="space-y-4">
             <div className="space-y-1">
-              <span className="text-primary font-bold text-sm uppercase tracking-wider">Step 04</span>
+              <span className="text-primary font-bold text-sm uppercase tracking-wider">Step 03</span>
               <h3 className="text-2xl font-bold leading-tight">Configure GitHub Copilot</h3>
               <p className="text-slate-400 leading-relaxed">
                 Enable discovery in the IDE. Your developers only see what you approve.
@@ -357,10 +336,10 @@ export function SetupJourney({ org = "your-org", repo = "mcp-registry" }: SetupJ
             </div>
           </div>
 
-          {/* Step 5 */}
+          {/* Step 4 */}
           <div className="space-y-4">
             <div className="space-y-1">
-              <span className="text-primary font-bold text-sm uppercase tracking-wider">Step 05</span>
+              <span className="text-primary font-bold text-sm uppercase tracking-wider">Step 04</span>
               <h3 className="text-2xl font-bold leading-tight">Team View</h3>
               <p className="text-slate-400">
                 Your developers now have a centralized, searchable view of all approved MCP servers directly in their IDE.
